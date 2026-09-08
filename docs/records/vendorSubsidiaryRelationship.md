@@ -1,0 +1,55 @@
+# vendorSubsidiaryRelationship
+
+Browser tag `vendorSubsidiaryRelationship` (Record REST v1, 2026.1).
+
+Base path: `https://{accountId}.suitetalk.api.netsuite.com/services/rest/record/v1` — collection `/vendorSubsidiaryRelationship`, instance `/vendorSubsidiaryRelationship/{id}`.
+
+Shared query/header conventions: [overview](../overview.md).
+
+## Methods
+
+| Method | Path | Operation ID | Summary | Request body | Responses |
+| --- | --- | --- | --- | --- | --- |
+| DELETE | `/vendorSubsidiaryRelationship` | `operation--vendorSubsidiaryRelationship-delete` | Delete a list of records. |  | 202 Accepted; default → `nsError` |
+| GET | `/vendorSubsidiaryRelationship` | `operation--vendorSubsidiaryRelationship-get` | Get list of records. |  | 200 OK → `vendorSubsidiaryRelationshipCollection`; 202 Accepted; default → `nsError` |
+| PATCH | `/vendorSubsidiaryRelationship` | `operation--vendorSubsidiaryRelationship-patch` | Update records. | `vendorSubsidiaryRelationshipCollection` | 202 Accepted; default → `nsError` |
+| POST | `/vendorSubsidiaryRelationship` | `operation--vendorSubsidiaryRelationship-post` | Insert record. | `vendorSubsidiaryRelationship` | 200 OK → `vendorSubsidiaryRelationship`; 202 Accepted; 204 No Content; default → `nsError` |
+| PUT | `/vendorSubsidiaryRelationship` | `operation--vendorSubsidiaryRelationship-put` | Insert or update records. | `vendorSubsidiaryRelationshipCollection` | 202 Accepted; default → `nsError` |
+| DELETE | `/vendorSubsidiaryRelationship/{id}` | `operation--vendorSubsidiaryRelationship--id--delete` | Remove record. |  | 202 Accepted; 204 No Content; default → `nsError` |
+| GET | `/vendorSubsidiaryRelationship/{id}` | `operation--vendorSubsidiaryRelationship--id--get` | Get record. |  | 200 OK → `vendorSubsidiaryRelationship`; 202 Accepted; default → `nsError` |
+| PATCH | `/vendorSubsidiaryRelationship/{id}` | `operation--vendorSubsidiaryRelationship--id--patch` | Update record. | `vendorSubsidiaryRelationship` | 200 OK → `vendorSubsidiaryRelationship`; 202 Accepted; 204 No Content; default → `nsError` |
+| PUT | `/vendorSubsidiaryRelationship/{id}` | `operation--vendorSubsidiaryRelationship--id--put` | Insert or update record. | `vendorSubsidiaryRelationship` | 202 Accepted; 204 No Content; default → `nsError` |
+
+## Parameters
+
+Parameters that appear on this tag’s operations. Shared names are defined in the overview; this table only records presence, location, required, type, format, enum, and default.
+
+| Operation ID | Method / path | Parameters |
+| --- | --- | --- |
+| `operation--vendorSubsidiaryRelationship-delete` | DELETE `/vendorSubsidiaryRelationship` | `ids`; in query; required; string · `Prefer`; in header; required; string; enum `respond-async` · `X-NetSuite-Idempotency-Key`; in header; string |
+| `operation--vendorSubsidiaryRelationship-get` | GET `/vendorSubsidiaryRelationship` | `q`; in query; string · `limit`; in query; integer (int32); default `1000` · `offset`; in query; integer (int32); default `0` · `expandRecords`; in query; boolean · `ids`; in query; string · `Prefer`; in header; string; enum `respond-async` · `X-NetSuite-Idempotency-Key`; in header; string |
+| `operation--vendorSubsidiaryRelationship-patch` | PATCH `/vendorSubsidiaryRelationship` | `X-NetSuite-PropertyValueValidation`; in header; string; default `Error`; enum `Error`, `Warning`, `Ignore` · `X-NetSuite-PropertyNameValidation`; in header; string; default `Warning`; enum `Error`, `Warning`, `Ignore` · `replace`; in query; string · `replaceSelectedFields`; in query; boolean; default `false` · `Prefer`; in header; required; string; enum `respond-async` · `X-NetSuite-Idempotency-Key`; in header; string |
+| `operation--vendorSubsidiaryRelationship-post` | POST `/vendorSubsidiaryRelationship` | `Prefer`; in header; string; enum `respond-async` · `X-NetSuite-Idempotency-Key`; in header; string · `fields`; in query; string · `q`; in query; string · `limit`; in query; integer (int32); default `1000` · `offset`; in query; integer (int32); default `0` · `expandSubResources`; in query; boolean; default `false` · `expand`; in query; string · `Accept`; in header; string; enum `application/vnd.oracle.resource+json; type=create-form`, `application/vnd.oracle.resource+json; type=select-options` · `replace`; in query; string · `X-NetSuite-PropertyNameValidation`; in header; string; default `Warning`; enum `Error`, `Warning`, `Ignore` · `X-NetSuite-PropertyValueValidation`; in header; string; default `Error`; enum `Error`, `Warning`, `Ignore` |
+| `operation--vendorSubsidiaryRelationship-put` | PUT `/vendorSubsidiaryRelationship` | `X-NetSuite-PropertyValueValidation`; in header; string; default `Error`; enum `Error`, `Warning`, `Ignore` · `X-NetSuite-PropertyNameValidation`; in header; string; default `Warning`; enum `Error`, `Warning`, `Ignore` · `replace`; in query; string · `replaceSelectedFields`; in query; boolean; default `false` · `Prefer`; in header; required; string; enum `respond-async` · `X-NetSuite-Idempotency-Key`; in header; string |
+| `operation--vendorSubsidiaryRelationship--id--delete` | DELETE `/vendorSubsidiaryRelationship/{id}` | `id`; in path; required; integer (int32); internal identifier · `Prefer`; in header; string; enum `respond-async` · `X-NetSuite-Idempotency-Key`; in header; string |
+| `operation--vendorSubsidiaryRelationship--id--get` | GET `/vendorSubsidiaryRelationship/{id}` | `id`; in path; required; integer (int32); internal identifier · `expandSubResources`; in query; boolean; default `false` · `simpleEnumFormat`; in query; boolean; default `false` · `fields`; in query; string · `Prefer`; in header; string; enum `respond-async` · `X-NetSuite-Idempotency-Key`; in header; string |
+| `operation--vendorSubsidiaryRelationship--id--patch` | PATCH `/vendorSubsidiaryRelationship/{id}` | `Prefer`; in header; string; enum `respond-async` · `X-NetSuite-Idempotency-Key`; in header; string · `fields`; in query; string · `q`; in query; string · `limit`; in query; integer (int32); default `1000` · `offset`; in query; integer (int32); default `0` · `expandSubResources`; in query; boolean; default `false` · `expand`; in query; string · `Accept`; in header; string; enum `application/vnd.oracle.resource+json; type=edit-form`, `application/vnd.oracle.resource+json; type=select-options` · `id`; in path; required; integer (int32); internal identifier · `X-NetSuite-PropertyNameValidation`; in header; string; default `Warning`; enum `Error`, `Warning`, `Ignore` · `X-NetSuite-PropertyValueValidation`; in header; string; default `Error`; enum `Error`, `Warning`, `Ignore` · `replace`; in query; string · `replaceSelectedFields`; in query; boolean; default `false` |
+| `operation--vendorSubsidiaryRelationship--id--put` | PUT `/vendorSubsidiaryRelationship/{id}` | `id`; in path; required; string; external identifier · `Prefer`; in header; string; enum `respond-async` · `X-NetSuite-Idempotency-Key`; in header; string · `X-NetSuite-PropertyNameValidation`; in header; string; default `Warning`; enum `Error`, `Warning`, `Ignore` · `X-NetSuite-PropertyValueValidation`; in header; string; default `Error`; enum `Error`, `Warning`, `Ignore` · `replace`; in query; string · `replaceSelectedFields`; in query; boolean; default `false` |
+
+## Schema refs
+
+Definitions owned by this record (property tables): [vendorSubsidiaryRelationship schemas](../schemas/vendorSubsidiaryRelationship.md).
+
+| Definition | Role |
+| --- | --- |
+| [`vendorSubsidiaryRelationship`](../schemas/vendorSubsidiaryRelationship.md#vendorsubsidiaryrelationship) | record body |
+| [`vendorSubsidiaryRelationshipCollection`](../schemas/vendorSubsidiaryRelationship.md#vendorsubsidiaryrelationshipcollection) | collection page |
+| [`vendorSubsidiaryRelationshipSelectOptions`](../schemas/vendorSubsidiaryRelationship.md#vendorsubsidiaryrelationshipselectoptions) | select-options |
+
+Other schemas referenced by this tag’s operations:
+
+- [`nsError`](../schemas/ns.md#nserror)
+
+## Sublists
+
+No `*Collection` properties on the record schema other than the record’s own collection type.

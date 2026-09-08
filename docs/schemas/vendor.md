@@ -1,0 +1,415 @@
+# Schemas: vendor
+
+Property tables for definitions owned by `vendor`.
+
+Record page: [vendor](../records/vendor.md).
+
+## Index
+
+- [vendor](#vendor) — 102 properties
+- [vendor-addressBook-addressBookAddress](#vendor-addressbook-addressbookaddress) — 18 properties
+- [vendor-addressBookCollection](#vendor-addressbookcollection) — 6 properties
+- [vendor-addressBookElement](#vendor-addressbookelement) — 11 properties
+- [vendor-campaignsCollection](#vendor-campaignscollection) — 6 properties
+- [vendor-campaignsElement](#vendor-campaignselement) — 2 properties
+- [vendor-currencyListCollection](#vendor-currencylistcollection) — 6 properties
+- [vendor-currencyListElement](#vendor-currencylistelement) — 6 properties
+- [vendor-ratesCollection](#vendor-ratescollection) — 6 properties
+- [vendor-ratesElement](#vendor-rateselement) — 4 properties
+- [vendor-rolesCollection](#vendor-rolescollection) — 6 properties
+- [vendor-rolesElement](#vendor-roleselement) — 9 properties
+- [vendor-subscriptionMessageHistoryCollection](#vendor-subscriptionmessagehistorycollection) — 6 properties
+- [vendor-subscriptionMessageHistoryElement](#vendor-subscriptionmessagehistoryelement) — 2 properties
+- [vendor-subscriptionsCollection](#vendor-subscriptionscollection) — 6 properties
+- [vendor-subscriptionsElement](#vendor-subscriptionselement) — 5 properties
+- [vendor-taxRegistrationCollection](#vendor-taxregistrationcollection) — 6 properties
+- [vendor-taxRegistrationElement](#vendor-taxregistrationelement) — 10 properties
+- [vendorCollection](#vendorcollection) — 6 properties
+- [vendorSelectOptions](#vendorselectoptions) — 24 properties
+
+## vendor
+
+Browser definition `vendor`.
+
+| Property | Label | Type | Format | Flags | Ref | Enum |
+| --- | --- | --- | --- | --- | --- | --- |
+| `accountNumber` | Account Number | string |  |  |  |  |
+| `addressBook` |  | vendor-addressBookCollection |  |  | [`vendor-addressBookCollection`](#vendor-addressbookcollection) |  |
+| `altEmail` | Alt. Email | string |  |  |  |  |
+| `altName` | Vendor | string |  |  |  |  |
+| `altPhone` | Alt. Phone | string |  |  |  |  |
+| `autoName` | Auto | boolean |  |  |  |  |
+| `balance` | Balance (Base) | number | double |  |  |  |
+| `balancePrimary` | Balance | number | double |  |  |  |
+| `bcn` | Business Number | string |  |  |  |  |
+| `billingClass` |  | nsResource |  |  | [`nsResource`](ns.md#nsresource) |  |
+| `campaigns` |  | vendor-campaignsCollection |  |  | [`vendor-campaignsCollection`](#vendor-campaignscollection) |  |
+| `category` |  | vendorCategory |  |  | [`vendorCategory`](vendorCategory.md#vendorcategory) |  |
+| `comments` | Comments | string |  |  |  |  |
+| `companyName` | Company Name | string |  |  |  |  |
+| `contact` |  | contact |  |  | [`contact`](contact.md#contact) |  |
+| `contactList` |  | contactCollection |  |  | [`contactCollection`](contact.md#contactcollection) |  |
+| `creditLimit` | Credit Limit | number | double |  |  |  |
+| `currency` |  | currency |  |  | [`currency`](currency.md#currency) |  |
+| `currencyList` |  | vendor-currencyListCollection |  |  | [`vendor-currencyListCollection`](#vendor-currencylistcollection) |  |
+| `customForm` |  | nsResource |  |  | [`nsResource`](ns.md#nsresource) |  |
+| `dateCreated` | Date Created | string | date-time |  |  |  |
+| `defaultAddress` | Default Address | string |  |  |  |  |
+| `defaultBankAccount` |  | account |  |  | [`account`](account.md#account) |  |
+| `defaultShippingAddress` | Default Shipping Address | string |  |  |  |  |
+| `defaultTaxReg` | Default Tax Reg. Number | string |  |  |  |  |
+| `defaultVendorPaymentAccount` |  | account |  |  | [`account`](account.md#account) |  |
+| `eligibleForCommission` | Eligible for Commission | boolean |  |  |  |  |
+| `email` | Vendor Email | string |  |  |  |  |
+| `emailPreference` |  | object |  |  |  |  |
+| `emailPreference.id` | Internal identifier | string |  |  |  | `PDF`, `HTML`, `DEFAULT` |
+| `emailPreference.refName` | Reference Name | string |  |  |  |  |
+| `emailTransactions` | Email Transactions | boolean |  |  |  |  |
+| `entityId` | Entity ID | string |  |  |  |  |
+| `expenseAccount` |  | account |  |  | [`account`](account.md#account) |  |
+| `externalId` | External ID | string |  |  |  |  |
+| `fax` | Fax | string |  |  |  |  |
+| `faxTransactions` | Fax Transactions | boolean |  |  |  |  |
+| `firstName` | First Name | string |  |  |  |  |
+| `giveAccess` | Login Access | boolean |  |  |  |  |
+| `globalSubscriptionStatus` |  | object |  |  |  |  |
+| `globalSubscriptionStatus.id` | Internal identifier | string |  |  |  | `1`, `2`, `3`, `4` |
+| `globalSubscriptionStatus.refName` | Reference Name | string |  |  |  |  |
+| `homePhone` | Home Phone | string |  |  |  |  |
+| `id` | Internal ID | string |  |  |  |  |
+| `image` |  | nsResource |  |  | [`nsResource`](ns.md#nsresource) |  |
+| `incoterm` |  | nsResource |  |  | [`nsResource`](ns.md#nsresource) |  |
+| `is1099Eligible` | 1099 Eligible | boolean |  |  |  |  |
+| `isAutogeneratedRepresentingEntity` | Is Autogenerated Representing Entity | boolean |  |  |  |  |
+| `isInactive` | Vendor is Inactive | boolean |  |  |  |  |
+| `isJobResourceVend` | Job Resource | boolean |  |  |  |  |
+| `isPerson` | Is Individual | boolean |  |  |  |  |
+| `laborCost` | Labor Cost | number | double |  |  |  |
+| `laborcategory` |  | nsResource |  |  | [`nsResource`](ns.md#nsresource) |  |
+| `lastModifiedDate` | Last Modified Date | string | date-time |  |  |  |
+| `lastName` | Last Name | string |  |  |  |  |
+| `legalName` | Legal Name | string |  |  |  |  |
+| `links` | Links | nsLink[] |  | read-only | [`nsLink`](ns.md#nslink) |  |
+| `manufacturingLocations` |  | locationCollection |  |  | [`locationCollection`](location.md#locationcollection) |  |
+| `middleName` | Middle Name | string |  |  |  |  |
+| `mobilePhone` | Mobile Phone | string |  |  |  |  |
+| `openingBalance` | Opening Balance | number | double |  |  |  |
+| `openingBalanceAccount` |  | account |  |  | [`account`](account.md#account) |  |
+| `openingBalanceDate` | Opening Balance Date | string | date |  |  |  |
+| `password` | Password | string |  |  |  |  |
+| `password2` | Confirm Password | string |  |  |  |  |
+| `payablesAccount` |  | account |  |  | [`account`](account.md#account) |  |
+| `phone` | Phone | string |  |  |  |  |
+| `phoneticName` | Furigana | string |  |  |  |  |
+| `predConfidence` | Predicted Risk Confidence | number | double |  |  |  |
+| `predictedDays` | Predicted Days Late/Early | integer | int64 |  |  |  |
+| `prepaymentBalance` | Prepayment Balance | number | double |  |  |  |
+| `printOnCheckAs` | Print on Check As | string |  |  |  |  |
+| `printTransactions` | Print Transactions | boolean |  |  |  |  |
+| `purchaseOrderAmount` | Vendor Bill - Purchase Order Amount Tolerance | number | float |  |  |  |
+| `purchaseOrderQuantity` | Vendor Bill - Purchase Order Quantity Tolerance | number | float |  |  |  |
+| `purchaseOrderQuantityDiff` | Vendor Bill - Purchase Order Quantity Difference | number | float |  |  |  |
+| `rate` | Hourly Rate | number | double |  |  |  |
+| `rates` |  | vendor-ratesCollection |  |  | [`vendor-ratesCollection`](#vendor-ratescollection) |  |
+| `receiptAmount` | Vendor Bill - Item Receipt Amount Tolerance | number | float |  |  |  |
+| `receiptQuantity` | Vendor Bill - Item Receipt Quantity Tolerance | number | float |  |  |  |
+| `receiptQuantityDiff` | Vendor Bill - Item Receipt Quantity Difference | number | float |  |  |  |
+| `refName` | Reference Name | string |  |  |  |  |
+| `representingSubsidiary` |  | subsidiary |  |  | [`subsidiary`](subsidiary.md#subsidiary) |  |
+| `requirePwdChange` | Require Password Change On Next Login | boolean |  |  |  |  |
+| `roles` |  | vendor-rolesCollection |  |  | [`vendor-rolesCollection`](#vendor-rolescollection) |  |
+| `salutation` | Mr./Ms... | string |  |  |  |  |
+| `sendEmail` | Send New Access Notification Email | boolean |  |  |  |  |
+| `subscriptionMessageHistory` |  | vendor-subscriptionMessageHistoryCollection |  |  | [`vendor-subscriptionMessageHistoryCollection`](#vendor-subscriptionmessagehistorycollection) |  |
+| `subscriptions` |  | vendor-subscriptionsCollection |  |  | [`vendor-subscriptionsCollection`](#vendor-subscriptionscollection) |  |
+| `subsidiary` |  | subsidiary |  |  | [`subsidiary`](subsidiary.md#subsidiary) |  |
+| `subsidiaryEdition` | Edition | string |  |  |  |  |
+| `taxIdNum` | Tax ID | string |  |  |  |  |
+| `taxItem` |  | nsResource |  |  | [`nsResource`](ns.md#nsresource) |  |
+| `taxRegistration` |  | vendor-taxRegistrationCollection |  |  | [`vendor-taxRegistrationCollection`](#vendor-taxregistrationcollection) |  |
+| `terms` |  | term |  |  | [`term`](term.md#term) |  |
+| `title` | Job Title | string |  |  |  |  |
+| `unbilledOrders` | Unbilled Orders (Base) | number | double |  |  |  |
+| `unbilledOrdersPrimary` | Unbilled Orders | number | double |  |  |  |
+| `unsubscribe` | Unsubscribe from Campaigns | boolean |  |  |  |  |
+| `url` | URL | string |  |  |  |  |
+| `vatRegNumber` | VAT Registration No. | string |  |  |  |  |
+| `workCalendar` |  | nsResource |  |  | [`nsResource`](ns.md#nsresource) |  |
+
+## vendor-addressBook-addressBookAddress
+
+Browser definition `vendor-addressBook-addressBookAddress`.
+
+| Property | Label | Type | Format | Flags | Ref | Enum |
+| --- | --- | --- | --- | --- | --- | --- |
+| `addr1` | Address 1 | string |  |  |  |  |
+| `addr2` | Address 2 | string |  |  |  |  |
+| `addr3` | Address 3 | string |  |  |  |  |
+| `addrPhone` | Phone | string |  |  |  |  |
+| `addrText` | Address | string |  |  |  |  |
+| `addressee` | Addressee | string |  |  |  |  |
+| `attention` | Attention | string |  |  |  |  |
+| `city` | City | string |  |  |  |  |
+| `country` |  | object |  |  |  |  |
+| `country.id` | Internal identifier | string |  |  |  | `PR`, `PS`, `PT`, `PW`, `PY`, `QA`, `AB`, `AD`, `AE`, `AF`, `AG`, `AI`, `AL`, `AM`, `AN`, `AO`, `AQ`, `AR`, `AS`, `AT`, `RE`, `AU`, `AW`, `AX`, `AZ`, `RO`, `BA`, `BB`, `RS`, `BD`, `BE`, `RU`, `BF`, `BG`, `RW`, `BH`, `BI`, `BJ`, `BL`, `BM`, `BN`, `BO`, `SA`, `BQ`, `SB`, `BR`, `SC`, `BS`, `SD`, `BT`, `SE`, `BV`, `SG`, `BW`, `SH`, `SI`, `BY`, `SJ`, `BZ`, `SK`, `SL`, `SM`, `SN`, `SO`, `CA`, `SR`, `CC`, `SS`, `CD`, `ST`, `CF`, `SV`, `CG`, `CH`, `SX`, `CI`, `SY`, `SZ`, `CK`, `CL`, `CM`, `CN`, `CO`, `CR`, `TC`, `CS`, `TD`, `CU`, `TF`, `CV`, `TG`, `CW`, `TH`, `CX`, `CY`, `TJ`, `CZ`, `TK`, `TL`, `TM`, `TN`, `TO`, `TR`, `TT`, `DE`, `TV`, `TW`, `DJ`, `TZ`, `DK`, `DM`, `DO`, `UA`, `UG`, `DZ`, `UM`, `EA`, `EC`, `US`, `EE`, `EG`, `EH`, `UY`, `UZ`, `VA`, `ER`, `VC`, `ES`, `ET`, `VE`, `VG`, `VI`, `VN`, `VU`, `FI`, `FJ`, `FK`, `FM`, `FO`, `FR`, `WF`, `GA`, `GB`, `WS`, `GD`, `GE`, `GF`, `GG`, `GH`, `GI`, `GL`, `GM`, `GN`, `GP`, `GQ`, `GR`, `GS`, `GT`, `GU`, `GW`, `GY`, `XK`, `HK`, `HM`, `HN`, `HR`, `HT`, `YE`, `HU`, `IC`, `ID`, `YT`, `IE`, `IL`, `IM`, `IN`, `IO`, `ZA`, `IQ`, `IR`, `IS`, `IT`, `ZM`, `JE`, `ZW`, `JM`, `JO`, `JP`, `KE`, `KG`, `KH`, `KI`, `KM`, `KN`, `KP`, `KR`, `KW`, `KY`, `KZ`, `LA`, `LB`, `LC`, `LI`, `LK`, `LR`, `LS`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `MD`, `ME`, `MF`, `MG`, `MH`, `MK`, `ML`, `MM`, `MN`, `MO`, `MP`, `MQ`, `MR`, `MS`, `MT`, `MU`, `MV`, `MW`, `MX`, `MY`, `MZ`, `NA`, `NC`, `NE`, `NF`, `NG`, `NI`, `NL`, `NO`, `NP`, `NR`, `NU`, `NZ`, `OM`, `PA`, `PE`, `PF`, `PG`, `PH`, `PK`, `PL`, `PM`, `PN` |
+| `country.refName` | Reference Name | string |  |  |  |  |
+| `externalId` | External ID | string |  |  |  |  |
+| `lastModifiedDate` | Last Modified Date | string | date-time |  |  |  |
+| `links` | Links | nsLink[] |  | read-only | [`nsLink`](ns.md#nslink) |  |
+| `override` | Override | boolean |  |  |  |  |
+| `refName` | Reference Name | string |  |  |  |  |
+| `state` | State/Province | string |  |  |  |  |
+| `zip` | Zip | string |  |  |  |  |
+
+## vendor-addressBookCollection
+
+Browser definition `vendor-addressBookCollection`.
+
+| Property | Label | Type | Format | Flags | Ref | Enum |
+| --- | --- | --- | --- | --- | --- | --- |
+| `count` | Count | integer | int64 | read-only |  |  |
+| `hasMore` | Has More Results | boolean |  | read-only |  |  |
+| `items` |  | vendor-addressBookElement[] |  |  | [`vendor-addressBookElement`](#vendor-addressbookelement) |  |
+| `links` | Links | nsLink[] |  | read-only | [`nsLink`](ns.md#nslink) |  |
+| `offset` | Query Offset | integer | int64 | read-only |  |  |
+| `totalResults` | Total Results | integer | int64 | read-only |  |  |
+
+## vendor-addressBookElement
+
+Browser definition `vendor-addressBookElement`.
+
+| Property | Label | Type | Format | Flags | Ref | Enum |
+| --- | --- | --- | --- | --- | --- | --- |
+| `addressBookAddress` |  | vendor-addressBook-addressBookAddress |  |  | [`vendor-addressBook-addressBookAddress`](#vendor-addressbook-addressbookaddress) |  |
+| `addressBookAddress_text` | Address | string |  |  |  |  |
+| `addressId` | Internal ID | string |  |  |  |  |
+| `defaultBilling` | Default Billing | boolean |  |  |  |  |
+| `defaultShipping` | Default Shipping | boolean |  |  |  |  |
+| `id` | ID | integer | int64 |  |  |  |
+| `internalId` | Internal ID | integer | int64 |  |  |  |
+| `label` | Label | string |  |  |  |  |
+| `lastModifiedDate` | Last Modified Date | string | date-time |  |  |  |
+| `links` | Links | nsLink[] |  | read-only | [`nsLink`](ns.md#nslink) |  |
+| `refName` | Reference Name | string |  |  |  |  |
+
+## vendor-campaignsCollection
+
+Browser definition `vendor-campaignsCollection`.
+
+| Property | Label | Type | Format | Flags | Ref | Enum |
+| --- | --- | --- | --- | --- | --- | --- |
+| `count` | Count | integer | int64 | read-only |  |  |
+| `hasMore` | Has More Results | boolean |  | read-only |  |  |
+| `items` |  | vendor-campaignsElement[] |  |  | [`vendor-campaignsElement`](#vendor-campaignselement) |  |
+| `links` | Links | nsLink[] |  | read-only | [`nsLink`](ns.md#nslink) |  |
+| `offset` | Query Offset | integer | int64 | read-only |  |  |
+| `totalResults` | Total Results | integer | int64 | read-only |  |  |
+
+## vendor-campaignsElement
+
+Browser definition `vendor-campaignsElement`.
+
+| Property | Label | Type | Format | Flags | Ref | Enum |
+| --- | --- | --- | --- | --- | --- | --- |
+| `links` | Links | nsLink[] |  | read-only | [`nsLink`](ns.md#nslink) |  |
+| `refName` | Reference Name | string |  |  |  |  |
+
+## vendor-currencyListCollection
+
+Browser definition `vendor-currencyListCollection`.
+
+| Property | Label | Type | Format | Flags | Ref | Enum |
+| --- | --- | --- | --- | --- | --- | --- |
+| `count` | Count | integer | int64 | read-only |  |  |
+| `hasMore` | Has More Results | boolean |  | read-only |  |  |
+| `items` |  | vendor-currencyListElement[] |  |  | [`vendor-currencyListElement`](#vendor-currencylistelement) |  |
+| `links` | Links | nsLink[] |  | read-only | [`nsLink`](ns.md#nslink) |  |
+| `offset` | Query Offset | integer | int64 | read-only |  |  |
+| `totalResults` | Total Results | integer | int64 | read-only |  |  |
+
+## vendor-currencyListElement
+
+Browser definition `vendor-currencyListElement`.
+
+| Property | Label | Type | Format | Flags | Ref | Enum |
+| --- | --- | --- | --- | --- | --- | --- |
+| `balance` | Balance | number | double |  |  |  |
+| `currency` |  | currency |  |  | [`currency`](currency.md#currency) |  |
+| `links` | Links | nsLink[] |  | read-only | [`nsLink`](ns.md#nslink) |  |
+| `prepaymentBalance` | Prepayment Balance | number | double |  |  |  |
+| `refName` | Reference Name | string |  |  |  |  |
+| `unbilledOrders` | Unbilled Orders | number | double |  |  |  |
+
+## vendor-ratesCollection
+
+Browser definition `vendor-ratesCollection`.
+
+| Property | Label | Type | Format | Flags | Ref | Enum |
+| --- | --- | --- | --- | --- | --- | --- |
+| `count` | Count | integer | int64 | read-only |  |  |
+| `hasMore` | Has More Results | boolean |  | read-only |  |  |
+| `items` |  | vendor-ratesElement[] |  |  | [`vendor-ratesElement`](#vendor-rateselement) |  |
+| `links` | Links | nsLink[] |  | read-only | [`nsLink`](ns.md#nslink) |  |
+| `offset` | Query Offset | integer | int64 | read-only |  |  |
+| `totalResults` | Total Results | integer | int64 | read-only |  |  |
+
+## vendor-ratesElement
+
+Browser definition `vendor-ratesElement`.
+
+| Property | Label | Type | Format | Flags | Ref | Enum |
+| --- | --- | --- | --- | --- | --- | --- |
+| `entityCurrency` |  | currency |  |  | [`currency`](currency.md#currency) |  |
+| `links` | Links | nsLink[] |  | read-only | [`nsLink`](ns.md#nslink) |  |
+| `rate` | Hourly Rate | number | double |  |  |  |
+| `refName` | Reference Name | string |  |  |  |  |
+
+## vendor-rolesCollection
+
+Browser definition `vendor-rolesCollection`.
+
+| Property | Label | Type | Format | Flags | Ref | Enum |
+| --- | --- | --- | --- | --- | --- | --- |
+| `count` | Count | integer | int64 | read-only |  |  |
+| `hasMore` | Has More Results | boolean |  | read-only |  |  |
+| `items` |  | vendor-rolesElement[] |  |  | [`vendor-rolesElement`](#vendor-roleselement) |  |
+| `links` | Links | nsLink[] |  | read-only | [`nsLink`](ns.md#nslink) |  |
+| `offset` | Query Offset | integer | int64 | read-only |  |  |
+| `totalResults` | Total Results | integer | int64 | read-only |  |  |
+
+## vendor-rolesElement
+
+Browser definition `vendor-rolesElement`.
+
+| Property | Label | Type | Format | Flags | Ref | Enum |
+| --- | --- | --- | --- | --- | --- | --- |
+| `billingWarn` | <A href='/app/billing/billingterms.nl?user=T'>Charges may apply</a> | string |  |  |  |  |
+| `centerType` |  | string |  |  |  |  |
+| `deviceidOnly` |  | string |  |  |  |  |
+| `links` | Links | nsLink[] |  | read-only | [`nsLink`](ns.md#nslink) |  |
+| `masterRole` |  | integer | int64 |  |  |  |
+| `refName` | Reference Name | string |  |  |  |  |
+| `selectedRole` |  | nsResource |  |  | [`nsResource`](ns.md#nsresource) |  |
+| `ssoOnly` |  | string |  |  |  |  |
+| `wsOnly` |  | string |  |  |  |  |
+
+## vendor-subscriptionMessageHistoryCollection
+
+Browser definition `vendor-subscriptionMessageHistoryCollection`.
+
+| Property | Label | Type | Format | Flags | Ref | Enum |
+| --- | --- | --- | --- | --- | --- | --- |
+| `count` | Count | integer | int64 | read-only |  |  |
+| `hasMore` | Has More Results | boolean |  | read-only |  |  |
+| `items` |  | vendor-subscriptionMessageHistoryElement[] |  |  | [`vendor-subscriptionMessageHistoryElement`](#vendor-subscriptionmessagehistoryelement) |  |
+| `links` | Links | nsLink[] |  | read-only | [`nsLink`](ns.md#nslink) |  |
+| `offset` | Query Offset | integer | int64 | read-only |  |  |
+| `totalResults` | Total Results | integer | int64 | read-only |  |  |
+
+## vendor-subscriptionMessageHistoryElement
+
+Browser definition `vendor-subscriptionMessageHistoryElement`.
+
+| Property | Label | Type | Format | Flags | Ref | Enum |
+| --- | --- | --- | --- | --- | --- | --- |
+| `links` | Links | nsLink[] |  | read-only | [`nsLink`](ns.md#nslink) |  |
+| `refName` | Reference Name | string |  |  |  |  |
+
+## vendor-subscriptionsCollection
+
+Browser definition `vendor-subscriptionsCollection`.
+
+| Property | Label | Type | Format | Flags | Ref | Enum |
+| --- | --- | --- | --- | --- | --- | --- |
+| `count` | Count | integer | int64 | read-only |  |  |
+| `hasMore` | Has More Results | boolean |  | read-only |  |  |
+| `items` |  | vendor-subscriptionsElement[] |  |  | [`vendor-subscriptionsElement`](#vendor-subscriptionselement) |  |
+| `links` | Links | nsLink[] |  | read-only | [`nsLink`](ns.md#nslink) |  |
+| `offset` | Query Offset | integer | int64 | read-only |  |  |
+| `totalResults` | Total Results | integer | int64 | read-only |  |  |
+
+## vendor-subscriptionsElement
+
+Browser definition `vendor-subscriptionsElement`.
+
+| Property | Label | Type | Format | Flags | Ref | Enum |
+| --- | --- | --- | --- | --- | --- | --- |
+| `lastModifiedDate` | Last Modified | string | date-time |  |  |  |
+| `links` | Links | nsLink[] |  | read-only | [`nsLink`](ns.md#nslink) |  |
+| `refName` | Reference Name | string |  |  |  |  |
+| `subscribed` | Subscribed | boolean |  |  |  |  |
+| `subscription` |  | campaignSubscription |  |  | [`campaignSubscription`](campaignSubscription.md#campaignsubscription) |  |
+
+## vendor-taxRegistrationCollection
+
+Browser definition `vendor-taxRegistrationCollection`.
+
+| Property | Label | Type | Format | Flags | Ref | Enum |
+| --- | --- | --- | --- | --- | --- | --- |
+| `count` | Count | integer | int64 | read-only |  |  |
+| `hasMore` | Has More Results | boolean |  | read-only |  |  |
+| `items` |  | vendor-taxRegistrationElement[] |  |  | [`vendor-taxRegistrationElement`](#vendor-taxregistrationelement) |  |
+| `links` | Links | nsLink[] |  | read-only | [`nsLink`](ns.md#nslink) |  |
+| `offset` | Query Offset | integer | int64 | read-only |  |  |
+| `totalResults` | Total Results | integer | int64 | read-only |  |  |
+
+## vendor-taxRegistrationElement
+
+Browser definition `vendor-taxRegistrationElement`.
+
+| Property | Label | Type | Format | Flags | Ref | Enum |
+| --- | --- | --- | --- | --- | --- | --- |
+| `address` | Address | string |  |  |  |  |
+| `id` | ID | integer | int64 |  |  |  |
+| `links` | Links | nsLink[] |  | read-only | [`nsLink`](ns.md#nslink) |  |
+| `nexus` |  | nexus |  |  | [`nexus`](nexus.md#nexus) |  |
+| `nexusCountry` |  | object |  |  |  |  |
+| `nexusCountry.id` | Internal identifier | string |  |  |  | `PR`, `PS`, `PT`, `PW`, `PY`, `QA`, `AB`, `AD`, `AE`, `AF`, `AG`, `AI`, `AL`, `AM`, `AN`, `AO`, `AQ`, `AR`, `AS`, `AT`, `RE`, `AU`, `AW`, `AX`, `AZ`, `RO`, `BA`, `BB`, `RS`, `BD`, `BE`, `RU`, `BF`, `BG`, `RW`, `BH`, `BI`, `BJ`, `BL`, `BM`, `BN`, `BO`, `SA`, `BQ`, `SB`, `BR`, `SC`, `BS`, `SD`, `BT`, `SE`, `BV`, `SG`, `BW`, `SH`, `SI`, `BY`, `SJ`, `BZ`, `SK`, `SL`, `SM`, `SN`, `SO`, `CA`, `SR`, `CC`, `SS`, `CD`, `ST`, `CF`, `SV`, `CG`, `CH`, `SX`, `CI`, `SY`, `SZ`, `CK`, `CL`, `CM`, `CN`, `CO`, `CR`, `TC`, `CS`, `TD`, `CU`, `TF`, `CV`, `TG`, `CW`, `TH`, `CX`, `CY`, `TJ`, `CZ`, `TK`, `TL`, `TM`, `TN`, `TO`, `TR`, `TT`, `DE`, `TV`, `TW`, `DJ`, `TZ`, `DK`, `DM`, `DO`, `UA`, `UG`, `DZ`, `UM`, `EA`, `EC`, `US`, `EE`, `EG`, `EH`, `UY`, `UZ`, `VA`, `ER`, `VC`, `ES`, `ET`, `VE`, `VG`, `VI`, `VN`, `VU`, `FI`, `FJ`, `FK`, `FM`, `FO`, `FR`, `WF`, `GA`, `GB`, `WS`, `GD`, `GE`, `GF`, `GG`, `GH`, `GI`, `GL`, `GM`, `GN`, `GP`, `GQ`, `GR`, `GS`, `GT`, `GU`, `GW`, `GY`, `XK`, `HK`, `HM`, `HN`, `HR`, `HT`, `YE`, `HU`, `IC`, `ID`, `YT`, `IE`, `IL`, `IM`, `IN`, `IO`, `ZA`, `IQ`, `IR`, `IS`, `IT`, `ZM`, `JE`, `ZW`, `JM`, `JO`, `JP`, `KE`, `KG`, `KH`, `KI`, `KM`, `KN`, `KP`, `KR`, `KW`, `KY`, `KZ`, `LA`, `LB`, `LC`, `LI`, `LK`, `LR`, `LS`, `LT`, `LU`, `LV`, `LY`, `MA`, `MC`, `MD`, `ME`, `MF`, `MG`, `MH`, `MK`, `ML`, `MM`, `MN`, `MO`, `MP`, `MQ`, `MR`, `MS`, `MT`, `MU`, `MV`, `MW`, `MX`, `MY`, `MZ`, `NA`, `NC`, `NE`, `NF`, `NG`, `NI`, `NL`, `NO`, `NP`, `NR`, `NU`, `NZ`, `OM`, `PA`, `PE`, `PF`, `PG`, `PH`, `PK`, `PL`, `PM`, `PN` |
+| `nexusCountry.refName` | Reference Name | string |  |  |  |  |
+| `nexusState` |  | nsResource |  |  | [`nsResource`](ns.md#nsresource) |  |
+| `refName` | Reference Name | string |  |  |  |  |
+| `taxRegistrationNumber` | Tax Reg. Number | string |  |  |  |  |
+
+## vendorCollection
+
+Browser definition `vendorCollection`.
+
+| Property | Label | Type | Format | Flags | Ref | Enum |
+| --- | --- | --- | --- | --- | --- | --- |
+| `count` | Count | integer | int64 | read-only |  |  |
+| `hasMore` | Has More Results | boolean |  | read-only |  |  |
+| `items` | Items | vendor[] |  |  | [`vendor`](#vendor) |  |
+| `links` | Links | nsLink[] |  | read-only | [`nsLink`](ns.md#nslink) |  |
+| `offset` | Query Offset | integer | int64 | read-only |  |  |
+| `totalResults` | Total Results | integer | int64 | read-only |  |  |
+
+## vendorSelectOptions
+
+Browser definition `vendorSelectOptions`.
+
+| Property | Label | Type | Format | Flags | Ref | Enum |
+| --- | --- | --- | --- | --- | --- | --- |
+| `billingClass` |  | nsResourceSelectOptions |  |  | [`nsResourceSelectOptions`](ns.md#nsresourceselectoptions) |  |
+| `category` |  | nsResourceSelectOptions |  |  | [`nsResourceSelectOptions`](ns.md#nsresourceselectoptions) |  |
+| `contact` |  | nsResourceSelectOptions |  |  | [`nsResourceSelectOptions`](ns.md#nsresourceselectoptions) |  |
+| `contactList` |  | nsResourceSelectOptions |  |  | [`nsResourceSelectOptions`](ns.md#nsresourceselectoptions) |  |
+| `currency` |  | nsResourceSelectOptions |  |  | [`nsResourceSelectOptions`](ns.md#nsresourceselectoptions) |  |
+| `customForm` |  | nsResourceSelectOptions |  |  | [`nsResourceSelectOptions`](ns.md#nsresourceselectoptions) |  |
+| `defaultBankAccount` |  | nsResourceSelectOptions |  |  | [`nsResourceSelectOptions`](ns.md#nsresourceselectoptions) |  |
+| `defaultShippingAddress` |  | nsResourceSelectOptions |  |  | [`nsResourceSelectOptions`](ns.md#nsresourceselectoptions) |  |
+| `defaultTaxReg` |  | nsResourceSelectOptions |  |  | [`nsResourceSelectOptions`](ns.md#nsresourceselectoptions) |  |
+| `defaultVendorPaymentAccount` |  | nsResourceSelectOptions |  |  | [`nsResourceSelectOptions`](ns.md#nsresourceselectoptions) |  |
+| `emailPreference` |  | nsResourceSelectOptions |  |  | [`nsResourceSelectOptions`](ns.md#nsresourceselectoptions) |  |
+| `expenseAccount` |  | nsResourceSelectOptions |  |  | [`nsResourceSelectOptions`](ns.md#nsresourceselectoptions) |  |
+| `globalSubscriptionStatus` |  | nsResourceSelectOptions |  |  | [`nsResourceSelectOptions`](ns.md#nsresourceselectoptions) |  |
+| `image` |  | nsResourceSelectOptions |  |  | [`nsResourceSelectOptions`](ns.md#nsresourceselectoptions) |  |
+| `incoterm` |  | nsResourceSelectOptions |  |  | [`nsResourceSelectOptions`](ns.md#nsresourceselectoptions) |  |
+| `laborcategory` |  | nsResourceSelectOptions |  |  | [`nsResourceSelectOptions`](ns.md#nsresourceselectoptions) |  |
+| `manufacturingLocations` |  | nsResourceSelectOptions |  |  | [`nsResourceSelectOptions`](ns.md#nsresourceselectoptions) |  |
+| `openingBalanceAccount` |  | nsResourceSelectOptions |  |  | [`nsResourceSelectOptions`](ns.md#nsresourceselectoptions) |  |
+| `payablesAccount` |  | nsResourceSelectOptions |  |  | [`nsResourceSelectOptions`](ns.md#nsresourceselectoptions) |  |
+| `representingSubsidiary` |  | nsResourceSelectOptions |  |  | [`nsResourceSelectOptions`](ns.md#nsresourceselectoptions) |  |
+| `subsidiary` |  | nsResourceSelectOptions |  |  | [`nsResourceSelectOptions`](ns.md#nsresourceselectoptions) |  |
+| `taxItem` |  | nsResourceSelectOptions |  |  | [`nsResourceSelectOptions`](ns.md#nsresourceselectoptions) |  |
+| `terms` |  | nsResourceSelectOptions |  |  | [`nsResourceSelectOptions`](ns.md#nsresourceselectoptions) |  |
+| `workCalendar` |  | nsResourceSelectOptions |  |  | [`nsResourceSelectOptions`](ns.md#nsresourceselectoptions) |  |
